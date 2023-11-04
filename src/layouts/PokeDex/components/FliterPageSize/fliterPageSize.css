@@ -1,0 +1,48 @@
+.filter-section {
+  gap: 1rem;
+  color: #ffcb05;
+  padding: 1rem 0;
+}
+
+.filter-options {
+  gap: 1rem;
+}
+
+.filter-options button {
+  font-size: 1.2rem;
+  border: 3px solid #ffcb05;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #ffcb05;
+  font-weight: bold;
+}
+
+.filter-options button:hover {
+  background: #ffcb05;
+  color: #1043b4;
+}
+
+.filter-options .active-btn {
+  background: #ffcb05;
+  color: #1043b4;
+}
+
+.filter-options.dark-mode button:hover,
+.filter-options.dark-mode .active-btn {
+  color: #252525;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .filter-options button {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  }
+}

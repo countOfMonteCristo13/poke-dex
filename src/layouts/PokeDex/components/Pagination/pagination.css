@@ -1,0 +1,30 @@
+.pokedex-pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+}
+
+.pokedex-pagination button {
+  width: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #1043b4;
+}
+
+.pokedex-pagination.dark-mode button {
+  color: #111111;
+}
+
+.pokedex-pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media screen and (max-width: 425px) {
+  .pokedex-pagination {
+    flex-direction: column;
+  }
+}
