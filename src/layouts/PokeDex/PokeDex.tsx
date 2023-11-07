@@ -124,7 +124,6 @@ const PokeDex: React.FC<PokeDexProps> = ({ selectedRegion, darkMode }) => {
 
   return (
     <section className="pokedex">
-      <h1>KENTO</h1>
       <div className="pokedex-title flex__center" id="#pokedex">
         <h2>{title}</h2>
       </div>
