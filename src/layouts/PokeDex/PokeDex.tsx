@@ -36,14 +36,9 @@ const PokeDex: React.FC<PokeDexProps> = ({ selectedRegion, darkMode }) => {
       setFetchLimit(regionSize);
       setForLimit(indexOfLastPokemon);
       setLastPokemon(regionSize);
-      // console.log(fetchLimit, 'fetch limit vece');
     } else {
       setForLimit(indexOfFirstPokemon + fetchLimit);
       setLastPokemon(fetchLimit);
-      // console.log(fetchLimit, 'fetch limit manje');
-      // console.log(indexOfFirstPokemon);
-      // console.log(indexOfLastPokemon);
-      // console.log(forLimit);
     }
 
     setFirstPokemon(0);
@@ -129,6 +124,7 @@ const PokeDex: React.FC<PokeDexProps> = ({ selectedRegion, darkMode }) => {
 
   return (
     <section className="pokedex">
+      <h1>KENTO</h1>
       <div className="pokedex-title flex__center" id="#pokedex">
         <h2>{title}</h2>
       </div>
