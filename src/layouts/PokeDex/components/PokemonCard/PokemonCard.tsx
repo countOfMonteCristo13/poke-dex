@@ -16,7 +16,7 @@ const PokemonCard: React.FC<{ pokemon: Pokemon; darkMode: boolean }> = (props) =
     <div
       className={`flex__center flex-col py-5 px-2 border-4 border-solid border-gold
       md:hover:shadow-[0px_0px_25px_0px_rgba(255,203,5,1)] rounded-2xl transition duration-400
-      cursor-pointer min-w-[250px] ${darkMode ? 'bg-dark-black' : 'bg-dark-blue'}`}
+      cursor-pointer min-w-[250px] ${darkMode ? 'bg-black' : 'bg-dark-blue'}`}
     >
       <div>
         <h3 className="font-bold capitalize text-lg text-center">
@@ -40,7 +40,7 @@ const PokemonCard: React.FC<{ pokemon: Pokemon; darkMode: boolean }> = (props) =
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <BsStars size={27} color={toggleShiny ? '#ffcb05' : '#252525'} style={iconStyle} />
+            <BsStars size={27} color={toggleShiny ? '#ffcb05' : '#111111'} style={iconStyle} />
           </button>
         )}
         <div className="flex__center capitalize text-center w-full">

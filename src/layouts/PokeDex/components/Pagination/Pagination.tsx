@@ -19,7 +19,7 @@ const Pagination: React.FC<PaginationProps> = ({
     <div className="flex__center p-4">
       <div
         className={`flex flex-col xs:flex-row items-center font-bold ${
-          darkMode ? 'text-dark-black' : 'text-dark-blue '
+          darkMode ? 'text-black' : 'text-dark-blue '
         }`}
       >
         <button

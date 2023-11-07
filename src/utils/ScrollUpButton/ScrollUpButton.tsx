@@ -26,7 +26,7 @@ const ScrollUpButton = () => {
   return (
     <button
       type="button"
-      className="p-1 hover:scale-110 transition duration-200 ease-in-out  fixed bottom-[10px] right-[10px]"
+      className="p-1 hover:scale-110 transition duration-200 ease-in-out  fixed bottom-[10px] right-[6px]"
       onClick={HandleButtonClick}
     >
       {showButton && <TbArrowBigUpLinesFilled size={32} color="#ffcb05" />}

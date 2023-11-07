@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ setRegion, darkMode }) => {
     <nav className="relative">
       <ul
         className={`hidden w-full md:flex flex-row items-center ${
-          darkMode ? 'bg-dark-black' : 'bg-dark-blue'
+          darkMode ? 'bg-black' : 'bg-dark-blue'
         }`}
       >
         {pokemonRegions.map((region) => (
@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ setRegion, darkMode }) => {
             type="button"
             onClick={() => handleRegionButtonClicked(region)}
           >
-            <li className="cursor-pointer p-4 text-white text-center text-base hover:text-gold">
+            <li className="cursor-pointer tracking-wide p-4 text-white text-center text-base hover:text-gold">
               {region.title}
             </li>
           </button>
@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ setRegion, darkMode }) => {
         <div
           className={`md:hidden fixed p-8 top-0 right-0 w-full h-screen z-[1000] 
           transition duration-500 ease-in slide-bottom flex flex-col justify-evenly items-start ${
-            darkMode ? 'bg-dark-black' : 'bg-dark-blue'
+            darkMode ? 'bg-black' : 'bg-dark-blue'
           }`}
         >
           <div className="w-full h-[140px] flex__center p-4">

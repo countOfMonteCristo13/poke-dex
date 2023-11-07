@@ -1,5 +1,3 @@
-import './fliterPageSize.css';
-
 type FliterPageSizeProps = {
   setPageSize: (size: number) => void;
   regionSize: number;
@@ -25,10 +23,10 @@ const FliterPageSize: React.FC<FliterPageSizeProps> = ({
               key={pageLength}
               type="button"
               className={`h-10 w-10 font-bold hover:bg-gold border-[3px] border-solid rounded-[50%] border-gold  
-              ${darkMode ? 'hover:text-black' : 'hover:text-pale-blue'}
+              ${darkMode ? 'hover:text-dark-black' : 'hover:text-pale-blue'}
               ${
                 pageSize === pageLength &&
-                (darkMode ? 'bg-gold text-black' : 'bg-gold text-pale-blue')
+                (darkMode ? 'bg-gold text-dark-black' : 'bg-gold text-pale-blue')
               }`}
               onClick={() => setPageSize(pageLength)}
             >
