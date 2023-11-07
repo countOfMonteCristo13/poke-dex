@@ -16,15 +16,18 @@ const FliterPageSize: React.FC<FliterPageSizeProps> = ({
   const pageSizes = [1, 10, 20, 50, regionSize];
 
   return (
-    <section className="flex__center filter-section">
+    <section className="flex__center flex-col md:flex-row gap-4 py-4 text-gold">
       <h3>Pokemons per page: </h3>
-      <div className={`flex__center filter-options ${darkMode ? 'dark-mode' : ''}`}>
+      <div className={`flex__center gap-2  ${darkMode ? 'dark-mode' : ''}`}>
         {pageSizes.map((pageLength) => {
           return (
             <button
               key={pageLength}
               type="button"
-              className={`page-size ${pageSize === pageLength && 'active-btn'}`}
+              className={`h-10 w-10 text-gold font-bold hover:bg-gold hover:text-pale-blue
+              border-[3px] border-solid rounded-[50%] border-gold ${
+                pageSize === pageLength && 'bg-gold text-pale-blue'
+              }`}
               onClick={() => setPageSize(pageLength)}
             >
               {pageLength === regionSize ? 'All' : pageLength}

@@ -28,110 +28,51 @@ const Navbar: React.FC<NavbarProps> = ({ setRegion, darkMode }) => {
   window.addEventListener('resize', closeWindow);
 
   return (
-    <nav>
-      <ul className={`regions ${darkMode ? 'dark-mode' : ''}`}>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.kanto)}>
-          <li className="region" id="kanto">
-            Kanto
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.johto)}>
-          <li className="region" id="johto">
-            Johto
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.hoenn)}>
-          <li className="region" id="hoenn">
-            Hoenn
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.sinnoh)}>
-          <li className="region" id="sinnoh">
-            Sinnoh
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.unova)}>
-          <li className="region" id="unova">
-            Unova
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.kalos)}>
-          <li className="region" id="kalos">
-            Kalos
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.alola)}>
-          <li className="region" id="alola">
-            Alola
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.hisui)}>
-          <li className="region" id="hisui">
-            Hisui
-          </li>
-        </button>
-        <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.paldea)}>
-          <li className="region" id="paldea">
-            Paldea
-          </li>
-        </button>
+    <nav className="relative">
+      <ul
+        className={`hidden bg-dark-blue w-full md:flex flex-row items-center ${
+          darkMode ? 'dark-mode' : ''
+        }`}
+      >
+        {pokemonRegions.map((region) => (
+          <button
+            className="w-full"
+            type="button"
+            onClick={() => handleRegionButtonClicked(region)}
+          >
+            <li className="cursor-pointer p-4 text-white text-center text-[18px] hover:text-gold">
+              {region.title}
+            </li>
+          </button>
+        ))}
       </ul>
 
-      <button type="button" className="burger-btn" onClick={() => setShowMenu(true)}>
+      <button
+        type="button"
+        className="absolute top-[5px] right-[10px] block md:hidden"
+        onClick={() => setShowMenu(true)}
+      >
         <TbMenuDeep size={36} color="#ffcb05" strokeWidth={2.5} />
       </button>
 
       {showMenu && (
-        <div className={`regions-menu__wrapper slide-bottom ${darkMode && 'dark-mode'}`}>
-          <div className="regions-menu__img flex__center">
-            <img src={pokemonLogo} alt="pokemon logo" />
+        <div
+          className={`md:hidden fixed p-8 top-0 right-0 w-full h-screen bg-dark-blue z-[1000] 
+          transition duration-500 ease-in slide-bottom flex flex-col justify-evenly items-start ${
+            darkMode && 'dark-mode'
+          }`}
+        >
+          <div className="w-full h-[140px] flex__center p-4">
+            <img className="h-full w-[90%] object-contain" src={pokemonLogo} alt="pokemon logo" />
           </div>
-          <ul className="regions-menu">
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.kanto)}>
-              <li className="region" id="kanto">
-                Kanto
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.johto)}>
-              <li className="region" id="johto">
-                Johto
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.hoenn)}>
-              <li className="region" id="hoenn">
-                Hoenn
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.sinnoh)}>
-              <li className="region" id="sinnoh">
-                Sinnoh
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.unova)}>
-              <li className="region" id="unova">
-                Unova
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.kalos)}>
-              <li className="region" id="kalos">
-                Kalos
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.alola)}>
-              <li className="region" id="alola">
-                Alola
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.hisui)}>
-              <li className="region" id="hisui">
-                Hisui
-              </li>
-            </button>
-            <button type="button" onClick={() => handleRegionButtonClicked(pokemonRegions.paldea)}>
-              <li className="region" id="paldea">
-                Paldea
-              </li>
-            </button>
+          <ul className="flex flex-col justify-center items-start">
+            {pokemonRegions.map((region) => (
+              <button type="button" onClick={() => handleRegionButtonClicked(region)}>
+                <li className="cursor-pointer p-[0.6rem] text-white text-[18px] hover:text-gold">
+                  {region.title}
+                </li>
+              </button>
+            ))}
           </ul>
         </div>
       )}

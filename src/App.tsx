@@ -8,7 +8,7 @@ import DarkModeButton from './utils/DarkModeButton/DarkModeButton';
 import ScrollUpButton from './utils/ScrollUpButton/ScrollUpButton';
 
 function App() {
-  const [selectedRegion, setSelectedRegion] = useState(pokemonRegions.kanto);
+  const [selectedRegion, setSelectedRegion] = useState(pokemonRegions[0]);
   const [darkMode, setDarkMode] = useState(false);
 
   const handleSetRegion = (region: RegionModel) => {
