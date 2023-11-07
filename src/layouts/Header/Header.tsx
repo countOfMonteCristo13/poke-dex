@@ -6,7 +6,7 @@ type DarkModeProp = {
 
 const Header: React.FC<DarkModeProp> = ({ darkMode }) => {
   return (
-    <header className={`flex__center h-[150px] px-8 py-4 bg-gold ${darkMode ? 'dark-mode' : ''}`}>
+    <header className={`flex__center h-44 px-8 py-4 ${darkMode ? 'bg-black' : 'bg-gold'}`}>
       <img className="w-full h-full object-contain" src={pokemonLogo} alt="pokemon logo" />
     </header>
   );

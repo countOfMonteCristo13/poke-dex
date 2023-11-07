@@ -1,7 +1,0 @@
-.pokemon-card {
-  box-shadow: 4px 10px 44px -22px rgba(133, 133, 133, 1);
-}
-
-.pokemon-card.dark-mode {
-  background: #111111;
-}

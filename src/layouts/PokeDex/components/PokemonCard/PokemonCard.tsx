@@ -1,8 +1,6 @@
-/* eslint-disable react/destructuring-assignment */
 import { useState } from 'react';
 import { BsStars } from 'react-icons/bs';
 import Pokemon from '../../../../models/Pokemon';
-import './pokemonCard.css';
 
 const PokemonCard: React.FC<{ pokemon: Pokemon; darkMode: boolean }> = (props) => {
   const [toggleShiny, setToggleShiny] = useState(false);
@@ -16,9 +14,9 @@ const PokemonCard: React.FC<{ pokemon: Pokemon; darkMode: boolean }> = (props) =
 
   return (
     <div
-      className={`pokemon-card flex__center flex-col py-5 px-2 border-4 border-solid border-gold
-      md:hover:shadow-[0px_0px_25px_0px_rgba(255,203,5,1)] rounded-2xl bg-dark-blue transition duration-400
-      cursor-pointer min-w-[250px] ${darkMode && 'dark-mode'}`}
+      className={`flex__center flex-col py-5 px-2 border-4 border-solid border-gold
+      md:hover:shadow-[0px_0px_25px_0px_rgba(255,203,5,1)] rounded-2xl transition duration-400
+      cursor-pointer min-w-[250px] ${darkMode ? 'bg-dark-black' : 'bg-dark-blue'}`}
     >
       <div>
         <h3 className="font-bold capitalize text-lg text-center">

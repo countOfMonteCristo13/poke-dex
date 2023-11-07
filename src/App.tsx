@@ -20,7 +20,7 @@ function App() {
   };
 
   return (
-    <div className={`pokedex-body ${darkMode ? 'dark-mode' : ''}`}>
+    <div className={`min-h-screen ${darkMode ? 'bg-black' : 'bg-pale-blue'}`}>
       <ScrollUpButton />
       <DarkModeButton setDarkMode={handleDarkMode} darkMode={darkMode} />
       <Header darkMode={darkMode} />

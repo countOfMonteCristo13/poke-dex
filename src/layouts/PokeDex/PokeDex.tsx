@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react';
-import './pokeDex.css';
 import Pokemon from '../../models/Pokemon';
 import RegionModel from '../../models/RegionModel';
 import Pagination from './components/Pagination/Pagination';
@@ -123,8 +122,8 @@ const PokeDex: React.FC<PokeDexProps> = ({ selectedRegion, darkMode }) => {
   }
 
   return (
-    <section className="pokedex">
-      <div className="pokedex-title flex__center" id="#pokedex">
+    <section>
+      <div className="mt-8 text-2xl flex__center" id="#pokedex">
         <h2>{title}</h2>
       </div>
       <FliterPageSize

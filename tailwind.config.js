@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     fontSize: {
       xs: ["12px", "16px"],
@@ -23,7 +24,8 @@ export default {
         gold: "#ffcb05",
         "dark-blue": "#1043b4",
         "pale-blue": "#2b6dff",
-        "white-400": "rgba(255, 255, 255, 0.80)",
+        black: "#252525",
+        "dark-black": "#111111",
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",

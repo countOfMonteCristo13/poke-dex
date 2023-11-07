@@ -37,23 +37,6 @@ body {
   position: relative;
 }
 
-.pokedex-body {
-  background: #2b6dff;
-  min-height: 100vh;
-}
-
-.pokedex-body.dark-mode {
-  background: #252525;
-}
-
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.header-bg.dark-mode {
-  background: #252525;
-}
-
 .slide-bottom {
   -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
