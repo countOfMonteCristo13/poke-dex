@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
-import PokemonCard from './components/PokemonCard/PokemonCard';
 import './pokeDex.css';
 import Pokemon from '../../models/Pokemon';
 import RegionModel from '../../models/RegionModel';
 import Pagination from './components/Pagination/Pagination';
 import FliterPageSize from './components/FliterPageSize/FliterPageSize';
 import Loader from '../../utils/Loader/Loader';
+import PokemonCards from './components/PokemonCards/PokemonCards';
 
 type PokeDexProps = {
   selectedRegion: RegionModel;
@@ -142,13 +142,7 @@ const PokeDex: React.FC<PokeDexProps> = ({ selectedRegion, darkMode }) => {
         <Loader />
       ) : (
         <>
-          <div className="pokedex-pokemons">
-            {pokemons.map((pokemon) => (
-              <div key={pokemon.name}>
-                <PokemonCard pokemon={pokemon} darkMode={darkMode} />
-              </div>
-            ))}
-          </div>
+          <PokemonCards pokemons={pokemons} darkMode={darkMode} />
           <Pagination
             firstPokemon={firstPokemon}
             lastPokemon={lastPokemon}

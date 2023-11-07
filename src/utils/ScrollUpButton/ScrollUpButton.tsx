@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './scrollUpButton.css';
 import { TbArrowBigUpLinesFilled } from 'react-icons/tb';
 
 const ScrollUpButton = () => {
@@ -25,7 +24,11 @@ const ScrollUpButton = () => {
   };
 
   return (
-    <button type="button" className="scroll-up-btn" onClick={HandleButtonClick}>
+    <button
+      type="button"
+      className="p-1 hover:scale-110 transition duration-200 ease-in-out  fixed bottom-[10px] right-[10px]"
+      onClick={HandleButtonClick}
+    >
       {showButton && <TbArrowBigUpLinesFilled size={32} color="#ffcb05" />}
     </button>
   );

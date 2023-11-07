@@ -1,4 +1,3 @@
-import './darkModeButton.css';
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 
 type DarkModeButtonProps = {
@@ -8,7 +7,11 @@ type DarkModeButtonProps = {
 
 const DarkModeButton: React.FC<DarkModeButtonProps> = ({ setDarkMode, darkMode }) => {
   return (
-    <button type="button" className="dark-mode-btn" onClick={setDarkMode}>
+    <button
+      type="button"
+      className="p-1 absolute top-[10px] right-[10px] transition duration-200 hover:scale-110"
+      onClick={setDarkMode}
+    >
       {darkMode ? (
         <BsFillSunFill size={24} color="#ffcb05" />
       ) : (
