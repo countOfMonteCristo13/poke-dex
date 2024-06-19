@@ -6,7 +6,7 @@ const pokemonRegions = [
     regionSize: 151,
   },
   {
-    title: 'Johto',
+    title: 'Johtos',
     indexOfFirstPokemon: 151,
     indexOfLastPokemon: 251,
     regionSize: 100,
